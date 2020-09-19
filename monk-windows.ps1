@@ -54,22 +54,22 @@ $tweaks = @(
 
     ### Security Tweaks ###
     "SetUACLow", # "SetUACHigh",
-    "DisableSharingMappedDrives",
-    "DisableAdminShares", # "EnableAdminShares",
+    #"DisableSharingMappedDrives",
+    #"DisableAdminShares", # "EnableAdminShares",
     "DisableSMB1", # "EnableSMB1",
-    "DisableSMBServer", # "EnableSMBServer",
-    "DisableLLMNR", # "EnableLLMNR",
+    #"DisableSMBServer", # "EnableSMBServer",
+    #"DisableLLMNR", # "EnableLLMNR",
     "SetCurrentNetworkPrivate", # "SetCurrentNetworkPublic",
     "SetUnknownNetworksPrivate", # "SetUnknownNetworksPublic",
     "DisableNetDevicesAutoInst", # "EnableNetDevicesAutoInst",
     "DisableCtrldFolderAccess",	# "EnableCtrldFolderAccess",
-    "DisableFirewall", # "EnableFirewall",
+    # "DisableFirewall", # "EnableFirewall",
     "DisableDefender", # "EnableDefender",
     "DisableDefenderCloud", # "EnableDefenderCloud",
     "EnableF8BootMenu", # "DisableF8BootMenu",
     #"SetDEPOptOut",                 # "SetDEPOptIn",
-    "DisableCIMemoryIntegrity",
-    "DisableScriptHost", # "EnableScriptHost",
+    #"DisableCIMemoryIntegrity",
+    #"DisableScriptHost", # "EnableScriptHost",
     #"EnableDotNetStrongCrypto",     # "DisableDotNetStrongCrypto",
     "DisableMeltdownCompatFlag", # "EnableMeltdownCompatFlag"    
 
@@ -80,7 +80,7 @@ $tweaks = @(
     "DisableHomeGroups", # "EnableHomeGroups",
     "DisableSharedExperiences", # "EnableSharedExperiences",
     "DisableRemoteAssistance", # "EnableRemoteAssistance",
-    "DisableRemoteDesktop",
+    "EnableRemoteDesktop",
     "DisableAutoplay", # "EnableAutoplay",
     "DisableAutorun", # "EnableAutorun",
     "DisableStorageSense", # "EnableStorageSense",
@@ -95,7 +95,7 @@ $tweaks = @(
 
     ### UI Tweaks ###
     "DisableActionCenter", # "EnableActionCenter",
-    "DisableLockScreen", # "EnableLockScreen",
+    "EnableLockScreen", # "EnableLockScreen",
     "DisableLockScreenRS1", # "EnableLockScreenRS1",
     # "HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
     # "HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
@@ -121,7 +121,7 @@ $tweaks = @(
 
     ### Explorer UI Tweaks ###
     "ShowKnownExtensions", # "HideKnownExtensions",
-    # "ShowHiddenFiles",              # "HideHiddenFiles",
+    "ShowHiddenFiles", # "HideHiddenFiles",
     "HideSyncNotifications"         # "ShowSyncNotifications",
     # "HideRecentShortcuts",          # "ShowRecentShortcuts",
     "SetExplorerThisPC", # "SetExplorerQuickAccess",
@@ -149,19 +149,19 @@ $tweaks = @(
     "UninstallOneDrive", # "InstallOneDrive",
     "UninstallMsftBloat", # "InstallMsftBloat",
     "UninstallThirdPartyBloat", # "InstallThirdPartyBloat",
-    "UninstallWindowsStore", # "InstallWindowsStore",
-    "DisableXboxFeatures", # "EnableXboxFeatures",
+    #"UninstallWindowsStore", # "InstallWindowsStore",
+    #"DisableXboxFeatures", # "EnableXboxFeatures",
     "DisableAdobeFlash", # "EnableAdobeFlash",
     "InstallMediaPlayer", # "UninstallMediaPlayer",
     "UninstallInternetExplorer", # "InstallInternetExplorer",
     "UninstallWorkFolders", # "InstallWorkFolders",
     "InstallLinuxSubsystem", # "UninstallLinuxSubsystem",
-    "UninstallHyperV",
+    #"UninstallHyperV",
     "SetPhotoViewerAssociation", # "UnsetPhotoViewerAssociation",
     "AddPhotoViewerOpenWith", # "RemovePhotoViewerOpenWith",
     "InstallPDFPrinter", # "UninstallPDFPrinter",
-    "UninstallXPSPrinter", # "InstallXPSPrinter",
-    "RemoveFaxPrinter", # "AddFaxPrinter",
+    #"UninstallXPSPrinter", # "InstallXPSPrinter",
+    #"RemoveFaxPrinter", # "AddFaxPrinter",
 
     ### Server Specific Tweaks ###
     # "HideServerManagerOnLogin",   # "ShowServerManagerOnLogin",
@@ -244,7 +244,12 @@ Function InstallOpenTrack {
 
 Function InstallSteam {
     Write-Output "Installing Steam"
-    choco install Steam -y
+    choco install steam -y
+}
+
+Function InstallDiscord {
+    Write-Output "Installing Discord"
+    choco install discord -y
 }
 
 
